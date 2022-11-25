@@ -19,7 +19,7 @@
 		0D74CAD8292C31DB00E41A5B /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAD7292C31DB00E41A5B /* AVLTree.swift */; };
 		0D74CADA292D4DFE00E41A5B /* AVLTreeSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAD9292D4DFE00E41A5B /* AVLTreeSimpleTests.swift */; };
 		0D74CADC292D4EE800E41A5B /* MockSearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CADB292D4EE800E41A5B /* MockSearchTree.swift */; };
-		0D74CADE292D6EFC00E41A5B /* MockSearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CADD292D6EFC00E41A5B /* MockSearchTreeTests.swift */; };
+		0D74CADE292D6EFC00E41A5B /* MockSearchTreeSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CADD292D6EFC00E41A5B /* MockSearchTreeSimpleTests.swift */; };
 		0D74CAEF292D988C00E41A5B /* AVLTreeCombinatoricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAEE292D988C00E41A5B /* AVLTreeCombinatoricTests.swift */; };
 		0D74CAF1292D9ED400E41A5B /* Array+Permutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAF0292D9ED400E41A5B /* Array+Permutations.swift */; };
 		0D74CAF3292D9F4000E41A5B /* Array+Subsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAF2292D9F4000E41A5B /* Array+Subsets.swift */; };
@@ -54,7 +54,7 @@
 		0D74CAD7292C31DB00E41A5B /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		0D74CAD9292D4DFE00E41A5B /* AVLTreeSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTreeSimpleTests.swift; sourceTree = "<group>"; };
 		0D74CADB292D4EE800E41A5B /* MockSearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTree.swift; sourceTree = "<group>"; };
-		0D74CADD292D6EFC00E41A5B /* MockSearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTreeTests.swift; sourceTree = "<group>"; };
+		0D74CADD292D6EFC00E41A5B /* MockSearchTreeSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTreeSimpleTests.swift; sourceTree = "<group>"; };
 		0D74CAEE292D988C00E41A5B /* AVLTreeCombinatoricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTreeCombinatoricTests.swift; sourceTree = "<group>"; };
 		0D74CAF0292D9ED400E41A5B /* Array+Permutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Permutations.swift"; sourceTree = "<group>"; };
 		0D74CAF2292D9F4000E41A5B /* Array+Subsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Subsets.swift"; sourceTree = "<group>"; };
@@ -128,13 +128,13 @@
 		0D74CACB292C2FF300E41A5B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0D74CAF2292D9F4000E41A5B /* Array+Subsets.swift */,
+				0D74CAF0292D9ED400E41A5B /* Array+Permutations.swift */,
+				0D74CADB292D4EE800E41A5B /* MockSearchTree.swift */,
+				0D74CADD292D6EFC00E41A5B /* MockSearchTreeSimpleTests.swift */,
 				0D74CAD9292D4DFE00E41A5B /* AVLTreeSimpleTests.swift */,
 				0D74CAEE292D988C00E41A5B /* AVLTreeCombinatoricTests.swift */,
 				0D74CAF4292DBB2800E41A5B /* AVLTreeStressTests.swift */,
-				0D74CADB292D4EE800E41A5B /* MockSearchTree.swift */,
-				0D74CADD292D6EFC00E41A5B /* MockSearchTreeTests.swift */,
-				0D74CAF0292D9ED400E41A5B /* Array+Permutations.swift */,
-				0D74CAF2292D9F4000E41A5B /* Array+Subsets.swift */,
 				0D7953C72931007A008BE3CA /* SplayTreeSimpleTests.swift */,
 				0D49601E29310DAD0013B372 /* SplayTreeCombinatoricTests.swift */,
 				0D49602029311A800013B372 /* SplayTreeStressTests.swift */,
@@ -265,7 +265,7 @@
 				0D74CAF1292D9ED400E41A5B /* Array+Permutations.swift in Sources */,
 				0D74CAF5292DBB2800E41A5B /* AVLTreeStressTests.swift in Sources */,
 				0D74CADA292D4DFE00E41A5B /* AVLTreeSimpleTests.swift in Sources */,
-				0D74CADE292D6EFC00E41A5B /* MockSearchTreeTests.swift in Sources */,
+				0D74CADE292D6EFC00E41A5B /* MockSearchTreeSimpleTests.swift in Sources */,
 				0D49602129311A800013B372 /* SplayTreeStressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

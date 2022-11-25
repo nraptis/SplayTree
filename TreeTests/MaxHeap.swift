@@ -2,7 +2,7 @@
 //  MaxHeap.swift
 //  HeapyHeaps
 //
-//  Created by Nicky Taylor on 10/20/22.
+//  Created by Nick Raptis on 10/20/22.
 //
 
 import Foundation

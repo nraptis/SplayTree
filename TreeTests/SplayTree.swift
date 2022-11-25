@@ -2,7 +2,7 @@
 //  SplayTree.swift
 //  TreeTests
 //
-//  Created by Nicky Taylor on 11/23/22.
+//  Created by Nick Raptis on 11/23/22.
 //
 
 import Foundation
@@ -155,11 +155,9 @@ class SplayTree<Element: Comparable>: BinarySearchTreeConforming {
     }
     
     private func splay(_ node: BinaryTreeNode?, _ element: Element) -> BinaryTreeNode? {
-        
         guard var node = node else {
             return nil
         }
-        
         if element < node.value {
             guard let left = node.left else {
                 return node
@@ -169,7 +167,6 @@ class SplayTree<Element: Comparable>: BinarySearchTreeConforming {
                 node = rotateRight(node)
             } else if element > left.value {
                 left.right = splay(left.right, element)
-                
                 if left.right != nil {
                     node.left = rotateLeft(left)
                 }

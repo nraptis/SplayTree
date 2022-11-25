@@ -2,7 +2,7 @@
 //  SplayTreeStressTests.swift
 //  Tests
 //
-//  Created by Nicky Taylor on 11/25/22.
+//  Created by Nick Raptis on 11/25/22.
 //
 
 import XCTest

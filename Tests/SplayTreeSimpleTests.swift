@@ -2,7 +2,7 @@
 //  SplayTreeSimpleTests.swift
 //  Tests
 //
-//  Created by Nicky Taylor on 11/25/22.
+//  Created by Nick Raptis on 11/25/22.
 //
 
 import XCTest
@@ -339,9 +339,7 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
-    
     
     func testInsertThreeRemoveOneByOneVersion07() {
         let tree = SplayTree<Int>()
@@ -377,7 +375,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion08() {
@@ -414,7 +411,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion09() {
@@ -451,7 +447,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion10() {
@@ -487,7 +482,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion11() {
@@ -523,7 +517,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion12() {
@@ -559,9 +552,7 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
-    
     
     func testInsertThreeRemoveOneByOneVersion13() {
         let tree = SplayTree<Int>()
@@ -596,7 +587,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion14() {
@@ -632,7 +622,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion15() {
@@ -668,7 +657,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion16() {
@@ -704,7 +692,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion17() {
@@ -740,7 +727,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.getMin() == nil)
         XCTAssert(tree.getMax() == nil)
         XCTAssert(tree.count == 0)
-        
     }
     
     func testInsertThreeRemoveOneByOneVersion18() {
@@ -1409,8 +1395,6 @@ final class SplayTreeSimpleTests: XCTestCase {
         XCTAssert(tree.count == 0)
     }
     
-    
-    //[1, 2, 3, 0], deleting: [3, 0, 1, 2], value of 3
     func testKnownFailureCase1() {
         let input = [1, 2, 3, 0]
         let tree = SplayTree<Int>()
