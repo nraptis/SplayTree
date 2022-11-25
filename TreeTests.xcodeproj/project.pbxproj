@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4441212931285D00850ACD /* ArrayTreeConforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4441202931285D00850ACD /* ArrayTreeConforming.swift */; };
 		0D49601F29310DAD0013B372 /* SplayTreeCombinatoricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49601E29310DAD0013B372 /* SplayTreeCombinatoricTests.swift */; };
 		0D49602129311A800013B372 /* SplayTreeStressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49602029311A800013B372 /* SplayTreeStressTests.swift */; };
 		0D74CAB7292C299600E41A5B /* TreeTestsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74CAB6292C299600E41A5B /* TreeTestsApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D4441202931285D00850ACD /* ArrayTreeConforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTreeConforming.swift; sourceTree = "<group>"; };
 		0D49601E29310DAD0013B372 /* SplayTreeCombinatoricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplayTreeCombinatoricTests.swift; sourceTree = "<group>"; };
 		0D49602029311A800013B372 /* SplayTreeStressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplayTreeStressTests.swift; sourceTree = "<group>"; };
 		0D74CAB3292C299600E41A5B /* TreeTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				0D74CAB8292C299600E41A5B /* ContentView.swift */,
 				0D74CABA292C299800E41A5B /* Assets.xcassets */,
 				0D74CABC292C299800E41A5B /* Preview Content */,
+				0D4441202931285D00850ACD /* ArrayTreeConforming.swift */,
 				0D74CAC4292C2AD200E41A5B /* BinaryTreeConforming.swift */,
 				0D87235A292EFE98002205E9 /* BinaryTreeConforming+Print.swift */,
 				0D74CAD7292C31DB00E41A5B /* AVLTree.swift */,
@@ -250,6 +253,7 @@
 				0D74CAD8292C31DB00E41A5B /* AVLTree.swift in Sources */,
 				0D74CAD5292C30A800E41A5B /* MinHeap.swift in Sources */,
 				0D74CAC5292C2AD200E41A5B /* BinaryTreeConforming.swift in Sources */,
+				0D4441212931285D00850ACD /* ArrayTreeConforming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

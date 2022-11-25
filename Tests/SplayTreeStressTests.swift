@@ -43,6 +43,70 @@ final class SplayTreeStressTests: XCTestCase {
         return true
     }
     
+    func compareTreesReverseOrder(realTree: SplayTree<Int>, mockTree: MockSearchTree<Int>) -> Bool {
+        if realTree.count != mockTree.count {
+            XCTFail("Trees do not have equal count. AVL: \(realTree.count), MOCK: \(mockTree.count)")
+            return false
+        }
+        
+        let count = realTree.count
+        var index = 0
+        while index < count {
+            let value = mockTree.data[count - index - 1]
+            if !realTree.contains(value) {
+                print("mock: \(mockTree.data)")
+                XCTFail("Trees does not contain [\(index)]. AVL: MISSING, MOCK: \(value)")
+                return false
+            }
+            index += 1
+        }
+        
+        if realTree.getMax() != mockTree.getMax() {
+            XCTFail("Trees do not have equal max. AVL: \(realTree.getMax() ?? -1), MOCK: \(mockTree.getMax() ?? -1)")
+            return false
+        }
+        
+        if realTree.getMin() != mockTree.getMin() {
+            XCTFail("Trees do not have equal min. AVL: \(realTree.getMin() ?? -1), MOCK: \(mockTree.getMin() ?? -1)")
+            return false
+        }
+        
+        return true
+    }
+    
+    func compareTreesRandomOrder(realTree: SplayTree<Int>, mockTree: MockSearchTree<Int>) -> Bool {
+        if realTree.count != mockTree.count {
+            XCTFail("Trees do not have equal count. AVL: \(realTree.count), MOCK: \(mockTree.count)")
+            return false
+        }
+        
+        if realTree.getMax() != mockTree.getMax() {
+            XCTFail("Trees do not have equal max. AVL: \(realTree.getMax() ?? -1), MOCK: \(mockTree.getMax() ?? -1)")
+            return false
+        }
+        
+        let count = realTree.count
+        var index = 0
+        
+        let data = mockTree.data.shuffled()
+        while index < count {
+            let value = data[index]
+            if !realTree.contains(value) {
+                print("mock: \(mockTree.data)")
+                XCTFail("Trees does not contain [\(index)]. AVL: MISSING, MOCK: \(value)")
+                return false
+            }
+            index += 1
+        }
+        
+        if realTree.getMin() != mockTree.getMin() {
+            XCTFail("Trees do not have equal min. AVL: \(realTree.getMin() ?? -1), MOCK: \(mockTree.getMin() ?? -1)")
+            return false
+        }
+        
+        return true
+    }
+    
     func testAdd1000ComparingEveryTime_10Times() {
         for _ in 0..<10 {
             var insert = [Int]()
@@ -56,6 +120,14 @@ final class SplayTreeStressTests: XCTestCase {
                 mockTree.insert(value)
                 
                 if !compareTrees(realTree: realTree, mockTree: mockTree) {
+                    print("Failed insertion on {\(value)}: \(insert)")
+                    return
+                }
+                if !compareTreesReverseOrder(realTree: realTree, mockTree: mockTree) {
+                    print("Failed insertion on {\(value)}: \(insert)")
+                    return
+                }
+                if !compareTreesRandomOrder(realTree: realTree, mockTree: mockTree) {
                     print("Failed insertion on {\(value)}: \(insert)")
                     return
                 }
@@ -86,6 +158,14 @@ final class SplayTreeStressTests: XCTestCase {
                     print("Failed deletion on {\(value)}: \(insert)")
                     return
                 }
+                if !compareTreesReverseOrder(realTree: realTree, mockTree: mockTree) {
+                    print("Failed insertion on {\(value)}: \(insert)")
+                    return
+                }
+                if !compareTreesRandomOrder(realTree: realTree, mockTree: mockTree) {
+                    print("Failed insertion on {\(value)}: \(insert)")
+                    return
+                }
             }
         }
     }
@@ -111,6 +191,14 @@ final class SplayTreeStressTests: XCTestCase {
                     return
                 }
                 if !compareTrees(realTree: realTree, mockTree: mockTree) {
+                    print("Failed on popping mins... \(insert) ... \(min1 ?? -1) vs \(min2 ?? -1)")
+                    return
+                }
+                if !compareTreesReverseOrder(realTree: realTree, mockTree: mockTree) {
+                    print("Failed on popping mins... \(insert) ... \(min1 ?? -1) vs \(min2 ?? -1)")
+                    return
+                }
+                if !compareTreesRandomOrder(realTree: realTree, mockTree: mockTree) {
                     print("Failed on popping mins... \(insert) ... \(min1 ?? -1) vs \(min2 ?? -1)")
                     return
                 }
@@ -140,6 +228,14 @@ final class SplayTreeStressTests: XCTestCase {
                     return
                 }
                 if !compareTrees(realTree: realTree, mockTree: mockTree) {
+                    print("Failed on popping maxes... \(insert) ... \(max1 ?? -1) vs \(max2 ?? -1)")
+                    return
+                }
+                if !compareTreesReverseOrder(realTree: realTree, mockTree: mockTree) {
+                    print("Failed on popping maxes... \(insert) ... \(max1 ?? -1) vs \(max2 ?? -1)")
+                    return
+                }
+                if !compareTreesRandomOrder(realTree: realTree, mockTree: mockTree) {
                     print("Failed on popping maxes... \(insert) ... \(max1 ?? -1) vs \(max2 ?? -1)")
                     return
                 }
@@ -220,7 +316,14 @@ final class SplayTreeStressTests: XCTestCase {
                 print("Failed stress test, operation: \(operation)")
                 return
             }
+            if !compareTreesReverseOrder(realTree: realTree, mockTree: mockTree) {
+                print("Failed stress test, operation: \(operation)")
+                return
+            }
+            if !compareTreesRandomOrder(realTree: realTree, mockTree: mockTree) {
+                print("Failed stress test, operation: \(operation)")
+                return
+            }
         }
     }
-    
 }
